@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# temporary files
+*.tmp
+*.bak
+*~
+
+# Quarto
+.quarto/
+
+# VS Code
+.vscode/
+
+# session files
+*.RDataTmp
