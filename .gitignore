@@ -19,3 +19,27 @@
 
 # session files
 *.RDataTmp
+
+# Microsoft Word temporary files
+
+~$*.docx
+
+~$*.doc
+
+*.tmp
+
+# macOS metadata
+
+.DS_Store
+
+._*
+
+
+# Microsoft Word temporary files
+~$*.docx
+~$*.doc
+*.tmp
+
+# macOS metadata
+.DS_Store
+._*
