@@ -163,6 +163,23 @@ taxa_g <- taxa %>%
     .groups = "drop"
   )
 
+taxa_f <- taxa %>%
+  mutate(
+    family = case_when(
+      is.na(family) | family == "" ~
+        paste0("Unclassified_", tax_id),
+      TRUE ~ family
+    )
+  ) %>%
+  group_by(family) %>%
+  summarise(
+    across(
+      matches("\\.filtered$"),
+      ~ sum(as.numeric(.x), na.rm = TRUE)
+    ),
+    .groups = "drop"
+  )
+
 ## ------------------------------------------------------------
 ## 6. Create samples x genera abundance matrix
 ## ------------------------------------------------------------
